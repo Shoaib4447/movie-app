@@ -3,7 +3,9 @@ function ListGroup() {
 
   return (
     <>
-      <h1>Hello World</h1>
+      <h1>List</h1>
+      {/* {items.length === 0 ? <p>No Items Found</p> : null} */}
+      {items.length === 0 && <p>No Items Found</p>}
       <ul className='list-group'>
         {items.map((item) => (
           <li key={item} className='list-group-item'>
