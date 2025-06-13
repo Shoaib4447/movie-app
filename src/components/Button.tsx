@@ -1,11 +1,12 @@
 interface Props {
   children: string;
-  color?: "primary" | "info" | "danger" | "success" | " secondary";
+  color?: "primary" | "Secondary" | "info";
   onClick: () => void;
 }
-const Button = ({ children, onClick, color = "secondary" }: Props) => {
+
+const Button = ({ children, color, onClick }: Props) => {
   return (
-    <button color='react' className={"btn btn-" + color} onClick={onClick}>
+    <button type='button' className={"btn btn-" + color} onClick={onClick}>
       {children}
     </button>
   );
