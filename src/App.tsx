@@ -1,18 +1,15 @@
 import "./App.css";
-import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 
 function App() {
-  const items = ["London", "Paris", "New YorK", "Tokyo", "San Francisco"];
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
   return (
     <div>
-      <ListGroup
-        items={items}
-        heading='Cites'
-        onSelectItem={handleSelectItem}
-      />
+      {/* Passing text as a prop is ok but what if we want to pass HTML then we use children */}
+
+      {/* <Alert text='This is alert from app component' /> */}
+      <Alert>
+        Hello <span className='bg-danger'>World</span>
+      </Alert>
     </div>
   );
 }
